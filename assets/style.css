@@ -1,0 +1,37 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+
+/*START OF NAVBAR ELEMENTS*/
+.navbar{
+   background-color: black;
+   padding: 20px;
+   margin-top: -10px;
+   margin-left: -10px;
+   margin-right:-10px;
+
+}
+.navlinks{
+    display:flex;
+    justify-content: flex-end;
+}
+
+ul.navlinks li a{
+  text-decoration: none;
+  padding-left:30px;
+  color:white;
+  
+}
+
+.logo{
+    margin-right:auto;
+    color:aliceblue;
+    text-decoration: none;
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+
+/*END OF NAVBAR ELEMENTS*/

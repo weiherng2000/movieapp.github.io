@@ -7,32 +7,48 @@
     <!-- 
     - primary meta tags
     -->
-    <title>Tvflix</title>
+    <title>MovieApp</title>
     <meta name="title" content="MovieApp">
     <meta name="description" content="MovieApp is a movie app to browse movies.">
-	  
-    <link rel="stylesheet" href="./style.css">
+	  <!-- 
+    - favicon is a small image displayed next to the page title in the browser tab.
+    -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- 
+    - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- 
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    
+    <!-- 
+    - custom js link
+    -->
+    <script></script>
   </head>
   <body>
     <header>
-      <nav>
-      <input type = "checkbox" id = "check">
-      <label for = "check" class = "checkbtn">
-        <i class = "fas fa-bars" ></i>
-      </label>
-      <label class=" logo">Bigbox</label>
-      <ul>
-        <li><a href = "#" class = "active">Home</a></li>
-        <li><a href = "#">About</a></li>
-        <li><a href = "#">Services</a></li>
-        <li><a href = "#">Contact</a></li>
-        <li><a href = "#">Feedback</a></li>
-      </ul>
+      <nav class = "navbar">
+        <ul class = "navlinks">
+          <a href="./index.html" class="logo">
+           Home
+          </a>
+          <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..."
+          class="search-field" autocomplete="off" search-field>
+          <img src="./assets/images/search.png" width="24" height="24" alt="search" class="leading-icon">       
+          <li><a href="#" >Login</a></li>
+          <li><a href="#" >Signup</a></li>
+          <li><a href="#" >Contact</a></li>
+          <li><a href="#" >About</a></li>
+        </ul>
+
       </nav>
     </header>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
   </body>
 </html>
