@@ -32,22 +32,35 @@
     <script></script>
   </head>
   <body>
-    <header>
-      <nav class = "navbar">
-        <ul class = "navlinks">
+    <header class = "header">
           <a href="./index.html" class="logo">
            Home
           </a>
-          <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..."
-          class="search-field" autocomplete="off" search-field>
-          <img src="./assets/images/search.png" width="24" height="24" alt="search" class="leading-icon">       
-          <li><a href="#" >Login</a></li>
-          <li><a href="#" >Signup</a></li>
-          <li><a href="#" >Contact</a></li>
-          <li><a href="#" >About</a></li>
-        </ul>
+          <div class="search-box " search-box>
+            <div class="search-wrapper " search-wrapper>
+              <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..."
+                class="search-field" autocomplete="off" search-field>
+              
+              <img src="./assets/images/search.png" width="24" height="24" alt="search" class="leading-icon">       
+            </div>
+      
+            <button class="search-btn" search-toggler>
+              <img src="./assets/images/close.png" width="24" height="24" alt="close search box">
+            </button>
+          </div>
 
-      </nav>
+          <a href="#"  >Contact</a>
+          <a href="#" >About</a>
+      
+          <button class="search-btn" search-toggler menu-close>
+            <img src="./assets/images/search.png" width="24" height="24" alt="open search box">
+          </button>
+      
+          <button class="menu-btn" menu-btn menu-toggler>
+            <img src="./assets/images/menu.png" width="24" height="24" alt="open menu" class="menu">
+            <img src="./assets/images/menu-close.png" width="24" height="24" alt="close menu" class="close">
+          </button>  
+
     </header>
    
   </body>
