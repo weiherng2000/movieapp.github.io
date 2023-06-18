@@ -305,7 +305,7 @@ body {
   max-width:300px;
   width:100%;
   border-block-start: 1px solid var(--banner-background);
-  overflow-y: overlay;
+  overflow-y: overlay;/*overflow: overlay is only supported by -Webkit browsers, is non-standardized, and allows the content to extend beneath the scrollbar*/
   z-index: 4;
   visibility: hidden;/*visibility hides the element but elements still takes up space*/
   transition: var(--transition-long);
@@ -374,3 +374,106 @@ body {
 }
 
 /*END OF SIDEBAR */
+
+/**
+ * BANNER CONTENT
+ */
+  
+ /*container containing all the movies pictures the big boy container*/
+ .container{
+  position: relative;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  padding: 24px 20px 48px;
+  height: calc(100vh - 96px);
+  overflow-y: overlay;
+  z-index: 1;
+ }
+
+ 
+ /*size of banner*/
+ .banner {
+  position: relative;
+  height: 570px;
+  border-radius: var(--radius-24);
+  overflow: hidden;
+}
+/*when banner is inactive*/
+.banner-slider .slider-item {
+  position: absolute;
+  top: 0;
+  left: 120%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--banner-background);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-long);
+}
+/*when banner is active display*/
+.banner-slider .active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+/*make the banner image more opacitised in the background*/
+.banner-slider .slider-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--banner-overlay));
+}
+
+/*put the words on the banner picture*/
+.banner-content{
+  position:absolute;
+  top: 270px;
+  left: 40px;
+  z-index:1;
+  color: var(--text-color);
+}
+
+.img-cover{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+ }
+  /*styling the words*/
+ .heading{
+  color:var(--white);
+  font-size: var(--fs-heading);
+  font-weight: var(--weight-bold);
+  letter-spacing: 1px;
+  line-height:1.4p;
+ }
+
+ .meta-list{
+  display: flex;
+  align-items:center;
+  gap:8px;
+  justify-content: flex-start;
+ }
+
+ .watch-btn{
+  width: max-content;
+  border-radius:var(--radius-8);
+  transition: var(--transition-short);
+  margin-top: 10px;
+ }
+ /*prevent the sypnopsis or title from overflowing too much lines*/
+ .banner :is(.heading, .synopsis) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden; /*hide any extra words*/
+}
+
+.banner .heading {
+  -webkit-line-clamp: 3; /*show up to 3 lines*/
+  margin-block-end: 16px;
+}
+
+.synopsis {
+  -webkit-line-clamp: 2;/*show up to 2 lines*/
+  margin-block-end: 24px;
+}
+/*end of synopsis and title*/
