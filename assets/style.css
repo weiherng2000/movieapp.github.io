@@ -453,7 +453,17 @@ body {
   gap:8px;
   justify-content: flex-start;
  }
-
+ .year{
+  font-size: var(--fs-label);
+ }
+ .rating {
+  background-color: var(--banner-background);
+  color: var(--white);
+  font-size: var(--fs-label);
+  font-weight: var(--weight-bold);
+  padding-inline: 6px;
+  border-radius: var(--radius-4);
+}
  .watch-btn{
   width: max-content;
   border-radius:var(--radius-8);
@@ -477,3 +487,75 @@ body {
   margin-block-end: 24px;
 }
 /*end of synopsis and title*/
+/*arrow css*/
+.slider-control{
+  position: absolute;
+  display:flex;
+  top: 30%;
+  width: max-content;
+  gap: 1300px;
+  
+}
+.slider button{
+  z-index: 1;
+}
+.arrow{
+  opacity:0.2;
+}
+.arrow:hover { opacity: 1; transform:scale(1.2); }
+/*end of arrow css*/
+
+/*Movie Slider Start*/
+/*slider titles*/
+.title-wrap{
+  margin-top: 20px;
+  padding-left: 20px;
+  margin-block-end: 24px;
+}
+.title-card{
+  font-size: var(--fs-title-lg);
+  letter-spacing:1px;
+  font-weight: var(--weight-bold);
+}
+.slider-list .innerlist {
+  position: relative;
+  display: flex;
+  gap: 16px;
+}
+
+.movie-card {
+  position: relative;
+  width: 200px;
+  padding-left:20px;
+}
+
+.poster {
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  background-color: var(--banner-background);
+  border-radius: var(--radius-16);
+  overflow: hidden;
+}
+
+.movie-card .title {
+  width: 100%;
+  white-space: nowrap; /*nowrap property will cause the movie list to be scrollable*/
+  /*nowrap makes the text go all way long horizontally without stopping*/
+  text-overflow: ellipsis;/*adds ellipsis to end of text if text overflows*/
+  overflow: hidden;
+  margin-block: 8px 4px;
+}
+/*put link inside the movie card*/
+.movie-card .card-btn {
+  position: absolute;
+  inset: 0;/*inset 0 means the href link will be 0 px distance away from its parent element*/
+}
+
+.slider-list::-webkit-scrollbar-thumb{background-color: transparent;}
+
+.slider-list.sidebar:is(:hover, :focus-within)::-webkit-scrollbar-thumb{
+  background-color:var(--banner-background);
+}
+
+.slider-list::-webkit-scrollbar-button{width:20px;}
