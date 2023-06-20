@@ -601,19 +601,24 @@ body {
 
 .meta-item{
   display:flex;
-  gap:4px;
+  gap:12px;
   align-items: center;
+  font-size: var(--fs-title-lg);
 }
 
+.meta-item span{
+  font-size: var(--fs-title-lg);
+}
 .bullet {
-  width: 4px;
-  height: 4px;
+  width: 10px;
+  height: 10px;
   background-color: var(--white-alpha-20);
   border-radius: var(--radius-8);
 }
 
 .movie-detail .genre {
   margin-block: 12px 16px;
+  font-size: var(--fs-body);
 }
 
 .movie-detail :is(.meta-list, .genre) {
@@ -652,6 +657,56 @@ body {
 }
 
 
-.actors-detail .title{
-  padding: 20px;
+.actor-title{
+  font-size: var(--fs-title);
+  font-weight: var(--weight-bold);
+}
+
+/*MOVIE LIST STYLING */
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 16px;
+  row-gap: 20px;
+}
+
+.genre-list :is(.movie-card, .poster) {
+  width: 100%;
+}
+
+.load-more::before
+ {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--white);
+  border-radius: var(--radius-24);
+  border-inline-end-color: transparent;
+  animation: loading 500ms linear infinite;/*animation here will use keyframes loading lasting 500ms with linear type of animation lasting infinitely*/
+  display: none;
+}
+.load-more {
+  background-color: var(--primary-variant);
+  margin-inline: auto;
+  margin-block: 36px 60px;
+}
+
+.load-more:is(:hover, :focus-visibe){
+  --primary-variant:hsla(350,67%,39%,1);
+}
+
+.load-more.loading::before { display: block; }
+
+.btn {
+  color: var(--white);
+  font-size: var(--fs-button);
+  font-weight: var(--weight-bold);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  padding-inline: 20px 24px;
+  border-radius: var(--radius-8);
+  transition: var(--transition-short);
 }
