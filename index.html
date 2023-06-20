@@ -29,14 +29,15 @@
     <!-- 
     - custom js link
     -->
-    <script></script>
+     <!--Defer means A script that will be downloaded in parallel to parsing the page, and executed after the page has finished parsing:*/-->
+    <script src="./global.js" defer></script>
   </head>
   <body>
     <header class = "header">
           <a href="./index.html" class="logo">
            Home
           </a>
-          <div class="search-box " search-box>
+          <div class="search-box" search-box>
             <div class="search-wrapper " search-wrapper>
               <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..."
                 class="search-field" autocomplete="off" search-field>

@@ -3,6 +3,9 @@
 
 /**
  * Add event on multiple elements
+ * elements are the elements we are trying to find such as p,div
+ * eventType is like onclick or hover
+ * callBack is the function we execute when eventType occurs
  */
 
 const addEventOnElements = function (elements, eventType, callback) {
@@ -11,6 +14,10 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 /**
  * Toggle search box in mobile device || small screen
+ * searchBox finds the nearest element with the search-box attribute
+ * searchTogglers finds all elements with the search-toggler attribute
+ * so when any searchTogglers element are clicked we execute the function
+ * to toggle between active or not in the searchBox element
  */
 
 const searchBox = document.querySelector("[search-box]");
