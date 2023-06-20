@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 
+    - primary meta tags
+    -->
+    <title>MovieDetail</title>
+    <meta name="title" content="MovieApp">
+    <meta name="description" content="MovieApp is a movie app to browse movies.">
+	  <!-- 
+    - favicon is a small image displayed next to the page title in the browser tab.
+    -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- 
+    - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- 
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- 
+    - custom js link
+    -->
+    <script></script>
+  </head>
+  <body>
+    <header class = "header">
+          <a href="./index.html" class="logo">
+           Home
+          </a>
+          <div class="search-box " search-box>
+            <div class="search-wrapper " search-wrapper>
+              <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..."
+                class="search-field" autocomplete="off" search-field>
+              
+              <img src="./assets/images/search.png" width="24" height="24" alt="search" class="leading-icon">       
+            </div>
+      
+            <button class="search-btn" search-toggler>
+              <img src="./assets/images/close.png" width="24" height="24" alt="close search box">
+            </button>
+          </div>
+
+          <button class="search-btn" search-toggler menu-close>
+            <img src="./assets/images/search.png" width="24" height="24" alt="open search box">
+          </button>
+
+          <a href="#"  >Contact</a>
+          <a href="#" >About</a>
+      
+      
+          <button class="menu-btn" menu-btn menu-toggler>
+            <img src="./assets/images/menu.png" width="24" height="24" alt="open menu" class="menu">
+            <img src="./assets/images/menu-close.png" width="24" height="24" alt="close menu" class="close">
+          </button>  
+
+    </header>
+
+    <nav class = "sidebar ">
+      <div class="sidebar-inner">
+        <div class="sidebar-list">
+
+          <p class = "title">Genre</p>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Adventure</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Sci-fi</a>
+        
+        </div>
+        <div class = "sidebar-footer">
+            <img src = "assets/images/tmdb-logo.svg" height = 140px width = 170px alt = "TMDB">
+        </div>
+      </div>
+    </nav>
+    <div class="overlay " overlay menu-toggler></div>
+
+    <article class = "container">
+        <div class="movie-detail">
+            <div class="backdrop-image" style="background-image: url('assets/images/slider-banner.jpg')">
+            </div>
+            <figure class = "poster movie ">
+                <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
+            </figure>
+            <div class="detail-box">
+                <div class="detail-content">
+                    <h1 class = "heading">Puss in Boots</h1>
+                    <div class="meta-list">
+                        <div class="meta-item">
+                            <img src = "assets/images/star.png" height = "24px" width = "20px">
+                             <span class = "span">7.3</span>
+                        </div>
+                        <div class="bullet">
+                        </div>
+                        <div class="meta-item">
+                            125min
+                        </div>
+                        <div class="bullet"></div>
+                        <div class="meta-item">
+                            2023
+                        </div>
+                        <div class="bullet"></div>
+                    </div>
+                    <p class = "genre">Action,Adventure</p>
+                </div>
+            </div>
+        </div>
+        <div class = "movie-plot">
+            <h2 class = "title">Plot</h2>
+            <p>Sadly, Puss in Boots, the undaunted Spanish lover and hero, is now down to the last of his nine lives, a decade after the events of Puss in Boots (2011). And as if that weren't enough, the unstoppable bounty hunter known as The Big Bad Wolf is after him. To restore all of his precious lives and escape an inglorious fate, Puss must pluck up his courage to embark on a dangerous quest into the Dark Forest to find the legendary Wishing Star. However, Puss isn't the only one seeking the map to the magical star. As the daring outlaw puts his skills to good use to stay one step ahead of formidable adversaries determined to get their hands on it, a crucial question arises: Does he have what it takes to face his most skilled and terrifying opponent and get his life back on track?</p>
+            <div class = "trailers-box">
+                <h3 class = "title">Trailers</h3>
+            </div>
+            <div class = "slider-list">
+                <div class="innerlist">
+                    <div class="video-card">
+                        <iframe width = "500" height = "300" src = "https://www.youtube.com/embed/RqrXhwS33yc" class = "img-cover">            
+                        </iframe>
+                    </div>
+                    <div class="video-card">
+                        <iframe width = "500" height = "300" src = "https://www.youtube.com/embed/RqrXhwS33yc" class = "img-cover">            
+                        </iframe>
+                    </div>
+                    <div class="video-card">
+                        <iframe width = "500" height = "300" src = "https://www.youtube.com/embed/RqrXhwS33yc" class = "img-cover">            
+                        </iframe>
+                    </div>
+                    <div class="video-card">
+                        <iframe width = "500" height = "300" src = "https://www.youtube.com/embed/RqrXhwS33yc" class = "img-cover">            
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "actors-box">
+           <div class="actors-detail">
+              <p class = "title">Cast:</p>
+              <p>Antonio,Salma,Harvey,Florence,Olivia</p>
+              <p class = "title">Crew:</p>
+              <p>Joey CrawFord</p>
+           </div>
+        </div>
+        <div class = "movie-list">
+            <div>
+                <h3 class = "title">Recommendations</h3>
+            </div>
+            <div class = "slider-list">
+                <div class = "innerlist">
+                    <div class="movie-card">
+                        <figure class = "poster">
+                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
+                        </figure>
+                        <h4 class = "title">Puss in Boots</h4>
+                        <div class = "meta-list">
+                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
+                          <div class="rating">6.9</div>
+                          <div class="year">2023</div>
+                        </div>
+                        <a href = "moviedetail.html" class = "card-btn"></a>
+                      </div>
+                      <div class="movie-card">
+                        <figure class = "poster">
+                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
+                        </figure>
+                        <h4 class = "title">Puss in Boots</h4>
+                        <div class = "meta-list">
+                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
+                          <div class="rating">6.9</div>
+                          <div class="year">2023</div>
+                        </div>
+                        <a href = "moviedetail.html" class = "card-btn"></a>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+
+       
+    </article>
+   
+  </body>
+</html>
