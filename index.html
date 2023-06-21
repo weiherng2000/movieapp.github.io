@@ -31,6 +31,8 @@
     -->
      <!--Defer means A script that will be downloaded in parallel to parsing the page, and executed after the page has finished parsing:*/-->
     <script src="./global.js" defer></script>
+    <!--type = "module" allows the use of import and export-->
+    <script src="./index.js" type="module"></script>
   </head>
   <body>
     <header class = "header">
@@ -65,25 +67,11 @@
 
     </header>
 
-    <nav class = "sidebar ">
+    <nav class = "sidebar" sidebar>
       <div class="sidebar-inner">
-        <div class="sidebar-list">
-
-          <p class = "title">Genre</p>
-
-          <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Adventure</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Sci-fi</a>
-        
-        </div>
-        <div class = "sidebar-footer">
-            <img src = "assets/images/tmdb-logo.svg" height = 140px width = 170px alt = "TMDB">
-        </div>
       </div>
     </nav>
+
     <div class="overlay " overlay menu-toggler></div>
 
     <article class = "container">
