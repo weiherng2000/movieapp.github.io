@@ -391,6 +391,18 @@ body {
   width: 100vw;
  }
 
+ .container::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(var(--bottom-overlay));
+  z-index: 1;
+  pointer-events: none;
+}
+
  
  /*size of banner*/
  .banner {
@@ -553,13 +565,14 @@ body {
   inset: 0;/*inset 0 means the href link will be 0 px distance away from its parent element*/
 }
 
-.slider-list::-webkit-scrollbar-thumb{background-color: transparent;}
+.slider-list::-webkit-scrollbar-thumb { background-color: transparent; }
 
-.slider-list.sidebar:is(:hover, :focus-within)::-webkit-scrollbar-thumb{
-  background-color:var(--banner-background);
+.slider-list:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
 }
 
-.slider-list::-webkit-scrollbar-button{width:20px;}
+.slider-list::-webkit-scrollbar-button { width: 20px; }
+
 
 /*START OF MOVIE DETAIL PAGE*/
 
@@ -710,3 +723,57 @@ body {
   border-radius: var(--radius-8);
   transition: var(--transition-short);
 }
+
+/*SEARCH BOX MODAL*/
+
+.search-modal {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--surface);
+  padding: 50px 24px;
+  overflow-y: overlay;
+  z-index: 4;
+  display: none;
+}
+
+.search-modal.active { display: block; }
+
+.search-modal .label {
+  color: var(--primary-variant);
+  font-weight: var(--weight-bold);
+  margin-block-end: 8px;
+}
+
+.search-modal :is(.movie-card, .poster) {
+  width: 100%;
+}
+
+
+.search-modal {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--surface);
+    padding: 50px 24px;
+    overflow-y: overlay;
+    z-index: 4;
+    display: none;
+}
+
+.search-modal::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(var(--bottom-overlay));
+    z-index: 1;
+    pointer-events: none;
+}
+
