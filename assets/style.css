@@ -313,7 +313,7 @@ body {
 }
 
 .sidebar.active {
-  transform: translateX(80px);
+ /* transform: translateX(20px);*/
   visibility: visible;
 }
 
@@ -506,7 +506,7 @@ body {
   display:flex;
   top: 30%;
   width: max-content;
-  gap: 1300px;
+  gap: 1350px;
   
 }
 .slider button{
@@ -515,7 +515,7 @@ body {
 .arrow{
   opacity:0.2;
 }
-.arrow:hover { opacity: 1; transform:scale(1.2); }
+.arrow:hover { opacity: 1; transform:scale(1.2);  background-color:grey; border-radius: 4px; }
 /*end of arrow css*/
 
 /*Movie Slider Start*/
