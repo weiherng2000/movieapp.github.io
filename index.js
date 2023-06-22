@@ -95,9 +95,11 @@ const heroBanner = function({ results: movieList })
             *ToFixed defines the number of decimal place ToFixed(1) is 1dp
             */
           sliderItem.innerHTML = `
-          <div class="slider-item">
-             <img src = "${imageBaseURL}w1280${backdrop_path}" alt = "${title}"class = "img-cover" loading = ${index === 0 ? "eager" : "lazy"
-            }>
+
+           
+          <img src="${imageBaseURL}w1280${backdrop_path}" alt="${title}" class="img-cover" loading=${index === 0 ? "eager" : "lazy"
+           }>
+
              <div class="banner-content">
 
                 <h2 class = "heading">${title}</h2>
@@ -114,38 +116,85 @@ const heroBanner = function({ results: movieList })
                 </a>
 
               </div>
-           </div>
+        
           
           `//add the slider item into the empty banner-slider element*/
           banner.querySelector(".banner-slider").appendChild(sliderItem);
 
-          const controlItem = document.createElement("button");
-          controlItem.classList.add("slider-button");
-          controlItem.setAttribute("slider-control", `${controlItemIndex}`);
 
-          controlItemIndex++;
-
-          controlItem.innerHTML = `
-            <img src = "assets/images/left-arrow.png" height = "100px"  width = "80px" class = "arrow">
-            `;
-           const controlItem2 = document.createElement("button");
-           controlItem2.classList.add("slider-button");
-           controlItem2.setAttribute("slider-control", `${controlItemIndex}`);
-
-           controlItem2.innerHTML = `
-            <img src = "assets/images/right-arrow.png" height = "100px"  width = "80px" class = "arrow">
-            `;
-
-           banner.querySelector(".slider-control").appendChild(controlItem);
-           banner.querySelector(".slider-control").appendChild(controlItem2);
-      
+         
     }
+    
+    /*add the left and right buttons*/
+    const controlItem = document.createElement("button");
+    controlItem.classList.add("slider-button-left");
+
+    /*left button added*/
+    controlItem.innerHTML = `
+      <img src = "assets/images/left-arrow.png" height = "100px"  width = "80px" class = "arrow">
+      `;
+     const controlItem2 = document.createElement("button");
+     controlItem2.classList.add("slider-button-right");
+     
+     /*right button added*/
+     controlItem2.innerHTML = `
+      <img src = "assets/images/right-arrow.png" height = "100px"  width = "80px" class = "arrow">
+      `;
+
+     banner.querySelector(".slider-control").appendChild(controlItem);
+     banner.querySelector(".slider-control").appendChild(controlItem2);
     
     /*add the content to the article container*/
     pageContent.appendChild(banner);
 
+    /*add functionality to he left and right button*/
+    addHeroSlide();
+
 
 }
 
-heroBanner();
+const addHeroSlide = function()
+{
+  /*currentslide is index 0*/
+  var currentSlide = 0;
+  /*select all banner slide elements*/
+  const sliderItems = document.querySelectorAll("[slider-item]");
+
+
+  /*checker will check whether current index matches the array slideindex,slideIndex is a parameter of ForEach*/
+  const checker = (index) => {
+    sliderItems.forEach((slide, slideIndex) => {
+      if (slideIndex === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+  };
+
+  checker(0);
+
+  
+  
+
+  /*next and pre buttons will ensure the currentslide variable will not exceed the max length*/
+  
+  const next = () => {
+    currentSlide >= sliderItems.length - 1 ? currentSlide = 0 : currentSlide++;
+    checker(currentSlide);
+  }
+
+  const prev = () => {
+    currentSlide <= 0 ? currentSlide = sliderItems.length - 1 : currentSlide--;
+    checker(currentSlide);
+  }
+
+  
+document.querySelector(".slider-button-right").addEventListener("click", next);
+document.querySelector(".slider-button-left").addEventListener("click", prev);
+
+  
+
+}
+
 
