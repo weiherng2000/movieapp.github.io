@@ -2,9 +2,28 @@
 
 import {sidebar} from "./sidebar.js";
 import { api_key,fetchDataFromServer,imageBaseURL } from "./api.js";
-
+import { createMovieCard } from "./moviecard.js";
 //call the sidebar function to activate the sidebar
 sidebar();
+
+/**
+ * Home page sections (Top rated, Upcoming, Trending movies)
+ */
+
+const homePageSections = [
+  {
+    title: "Upcoming Movies",
+    path: "/movie/upcoming"
+  },
+  {
+    title: "Weekly Trending Movies",
+    path: "/trending/movie/week"
+  },
+  {
+    title: "Top Rated Movies",
+    path: "/movie/top_rated"
+  }
+]
 
 //find the element with page-content attribute which is the container
 const pageContent = document.querySelector("[page-content]");
@@ -70,6 +89,7 @@ const heroBanner = function({ results: movieList })
 
     let controlItemIndex = 0;
     /*now for the logic of the main banner */
+    /*we use.entries for arrays only*/
     for (const [index, movie] of movieList.entries()) 
     {
         /*this is the object from the api results/movieList*/
@@ -150,8 +170,13 @@ const heroBanner = function({ results: movieList })
     /*add functionality to he left and right button*/
     addHeroSlide();
 
+    for(const{title,path} of homePageSections)
+    {
+        fetchDataFromServer(`https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`, createMovieList, title);
+    }
 
 }
+
 
 const addHeroSlide = function()
 {
@@ -194,6 +219,42 @@ document.querySelector(".slider-button-right").addEventListener("click", next);
 document.querySelector(".slider-button-left").addEventListener("click", prev);
 
   
+
+}
+/*We destructure the results from the to movieList again*/
+/*we pass in the api data into the callback function */ 
+/*title is the optionalParam here*/
+/*movieList is the destructured object that has results saved into*/
+const createMovieList = function( {results: movieList},title){
+
+  const movieListelem = document.createElement("section");
+  movieListelem.classList.add("movie-list");
+  movieListelem.ariaLabel = `${title}`;
+
+ 
+  movieListelem.innerHTML = `
+
+    <div class="title-wrap">
+       <h3 class = "title-card">${title}</h3>
+    </div>
+    <div class="slider-list">
+      <div class="innerlist">
+      </div>
+    </div>
+    
+  `;
+
+  for (const movie of movieList) 
+  {
+    const movieCard = createMovieCard(movie); // called from movie_card.js
+    movieListelem.querySelector(".innerlist").appendChild(movieCard);
+  }
+
+  pageContent.appendChild(movieListelem);
+      
+ 
+
+
 
 }
 

@@ -519,6 +519,7 @@ body {
 /*end of arrow css*/
 
 /*Movie Slider Start*/
+.movie-list { padding-block-start: 32px; }
 /*slider titles*/
 .title-wrap{
   margin-top: 20px;
@@ -542,6 +543,8 @@ body {
   padding-left:20px;
 }
 
+.movie-card .card-banner { width: 200px; }
+
 .poster {
   background-repeat: no-repeat;
   background-size: 50px;
@@ -563,6 +566,12 @@ body {
 .movie-card .card-btn {
   position: absolute;
   inset: 0;/*inset 0 means the href link will be 0 px distance away from its parent element*/
+}
+
+/*this will allow scrolling horizontally for each movie-list div tag*/
+.slider-list {
+  overflow-x: overlay;
+  padding-block-end: 16px; /*creates distance between scrollbar and moviecard*/
 }
 
 .slider-list::-webkit-scrollbar-thumb { background-color: transparent; }
