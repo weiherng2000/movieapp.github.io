@@ -36,5 +36,10 @@ addEventOnElements(searchTogglers, "click", function () {
 const setMovieDetail = function (movieId) {
   window.localStorage.setItem("movieId", String(movieId));
 }
-
+/*this is for the sidebar*/
+const getMovieList = function (urlParam, genreName) 
+{
+  window.localStorage.setItem("urlParam", urlParam);
+  window.localStorage.setItem("genreName", genreName);
+}
 

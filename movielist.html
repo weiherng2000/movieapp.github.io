@@ -29,7 +29,8 @@
     <!-- 
     - custom js link
     -->
-    <script></script>
+    <script src="./global.js" defer></script>
+    <script src="./movielist.js" type="module"></script>
   </head>
   <body>
     <header class = "header">
@@ -63,204 +64,16 @@
           </button>  
 
     </header>
-
-    <nav class = "sidebar ">
-      <div class="sidebar-inner">
-        <div class="sidebar-list">
-
-          <p class = "title">Genre</p>
-
-          <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Adventure</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Sci-fi</a>
-        
-        </div>
-        <div class = "sidebar-footer">
-            <img src = "assets/images/tmdb-logo.svg" height = 140px width = 170px alt = "TMDB">
-        </div>
-      </div>
+    <main>
+    <nav class = "sidebar " sidebar>
     </nav>
     <div class="overlay " overlay menu-toggler></div>
 
-    <article class = "container">
-       
-        <div class = "movie-list genre list">
-            <div class = "title-wrap">
-                <h3 class = "heading">All fantasy movies</h3>
-            </div>
-            <div class = "grid-list">
-
-                    <div class="movie-card">
-                        <figure class = "poster">
-                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                        </figure>
-                        <h4 class = "title">Puss in Boots</h4>
-                        <div class = "meta-list">
-                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                          <div class="rating">6.9</div>
-                          <div class="year">2023</div>
-                        </div>
-                        <a href = "moviedetail.html" class = "card-btn"></a>
-                      </div>
-                      <div class="movie-card">
-                        <figure class = "poster">
-                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                        </figure>
-                        <h4 class = "title">Puss in Boots</h4>
-                        <div class = "meta-list">
-                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                          <div class="rating">6.9</div>
-                          <div class="year">2023</div>
-                        </div>
-                        <a href = "moviedetail.html" class = "card-btn"></a>
-                      </div>
-                      <div class="movie-card">
-                        <figure class = "poster">
-                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                        </figure>
-                        <h4 class = "title">Puss in Boots</h4>
-                        <div class = "meta-list">
-                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                          <div class="rating">6.9</div>
-                          <div class="year">2023</div>
-                        </div>
-                        <a href = "moviedetail.html" class = "card-btn"></a>
-                      </div>
-                      <div class="movie-card">
-                        <figure class = "poster">
-                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                        </figure>
-                        <h4 class = "title">Puss in Boots</h4>
-                        <div class = "meta-list">
-                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                          <div class="rating">6.9</div>
-                          <div class="year">2023</div>
-                        </div>
-                        <a href = "moviedetail.html" class = "card-btn"></a>
-                      </div>
-                      <div class="movie-card">
-                        <figure class = "poster">
-                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                        </figure>
-                        <h4 class = "title">Puss in Boots</h4>
-                        <div class = "meta-list">
-                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                          <div class="rating">6.9</div>
-                          <div class="year">2023</div>
-                        </div>
-                        <a href = "moviedetail.html" class = "card-btn"></a>
-                      </div>
-                      <div class="movie-card">
-                        <figure class = "poster">
-                          <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                        </figure>
-                        <h4 class = "title">Puss in Boots</h4>
-                        <div class = "meta-list">
-                          <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                          <div class="rating">6.9</div>
-                          <div class="year">2023</div>
-                        </div>
-                        <a href = "moviedetail.html" class = "card-btn"></a>
-                      </div>
-            </div>
-
-            <button class = "btn load-more">Load More</button>
-
-        </div>
-
-       
+    <article class = "container" page-content>
     </article>
-    <div class = "container">
-      
-    </div>
 
-    <div class="search-modal active">
-        <p class = "label">Results for </p>
+    </main>
 
-        <h1 class = "heading">Puss in Boots</h1>
-
-        <div class = "movie-list">
-          <div class = "grid-list">
-
-              <div class="movie-card">
-                <figure class = "poster">
-                  <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                </figure>
-                <h4 class = "title">Puss in Boots</h4>
-                <div class = "meta-list">
-                  <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                  <div class="rating">6.9</div>
-                  <div class="year">2023</div>
-                </div>
-                <a href = "moviedetail.html" class = "card-btn"></a>
-              </div>
-              <div class="movie-card">
-                <figure class = "poster">
-                  <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                </figure>
-                <h4 class = "title">Puss in Boots</h4>
-                <div class = "meta-list">
-                  <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                  <div class="rating">6.9</div>
-                  <div class="year">2023</div>
-                </div>
-                <a href = "moviedetail.html" class = "card-btn"></a>
-              </div>
-              <div class="movie-card">
-                <figure class = "poster">
-                  <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                </figure>
-                <h4 class = "title">Puss in Boots</h4>
-                <div class = "meta-list">
-                  <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                  <div class="rating">6.9</div>
-                  <div class="year">2023</div>
-                </div>
-                <a href = "moviedetail.html" class = "card-btn"></a>
-              </div>
-              <div class="movie-card">
-                <figure class = "poster">
-                  <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                </figure>
-                <h4 class = "title">Puss in Boots</h4>
-                <div class = "meta-list">
-                  <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                  <div class="rating">6.9</div>
-                  <div class="year">2023</div>
-                </div>
-                <a href = "moviedetail.html" class = "card-btn"></a>
-              </div>
-              <div class="movie-card">
-                <figure class = "poster">
-                  <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                </figure>
-                <h4 class = "title">Puss in Boots</h4>
-                <div class = "meta-list">
-                  <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                  <div class="rating">6.9</div>
-                  <div class="year">2023</div>
-                </div>
-                <a href = "moviedetail.html" class = "card-btn"></a>
-              </div>
-              <div class="movie-card">
-                <figure class = "poster">
-                  <img src = "assets/images/slider-control.jpg" alt = "Puss in Boots Last Wish"class = "img-cover" loading = "eager">
-                </figure>
-                <h4 class = "title">Puss in Boots</h4>
-                <div class = "meta-list">
-                  <img src = "assets/images/star.png" alt = "star" height = "24px" width = "24px">
-                  <div class="rating">6.9</div>
-                  <div class="year">2023</div>
-                </div>
-                <a href = "moviedetail.html" class = "card-btn"></a>
-              </div>
-           </div>
-
-        </div>
-    </div>
    
   </body>
 </html>

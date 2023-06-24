@@ -3,6 +3,7 @@
 import {sidebar} from "./sidebar.js";
 import { api_key,fetchDataFromServer,imageBaseURL } from "./api.js";
 import { createMovieCard } from "./moviecard.js";
+import { search } from "./search.js";
 //call the sidebar function to activate the sidebar
 sidebar();
 
@@ -251,11 +252,11 @@ const createMovieList = function( {results: movieList},title){
   }
 
   pageContent.appendChild(movieListelem);
-      
- 
 
-
+  
 
 }
+
+search();
 
 

@@ -3,6 +3,7 @@
 import { api_key,imageBaseURL,fetchDataFromServer } from "./api.js";
 import { createMovieCard } from "./moviecard.js";
 import{ sidebar} from "./sidebar.js";
+import { search } from "./search.js";
 
 /*The window object represents an open window in a browser.*/
 /*If a document contain frames (<iframe> tags), the browser creates one window object for the HTML document, 
@@ -195,4 +196,6 @@ const addSuggestedMovies = function({ results: movieList }, title)
 
     
 }
+
+search();
 
