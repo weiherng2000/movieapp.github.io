@@ -1,0 +1,30 @@
+const movieplot = document.createElement("div");
+    movieplot.classList.add("movie-plot");
+
+    movieplot.innerHTML = `
+    
+    <h2 class = "title">Plot</h2>
+    <p>${overview}</p>
+    <div class = "trailers-box">
+        <h3 class = "title">Trailers</h3>
+    </div>
+    <div class = "slider-list">
+        <div class="innerlist">
+        </div>
+    </div>
+    
+    `
+    
+    const actors = document.createElement("div");
+    actors.classList.add("actors-box");
+
+    actors.innerHTML = `
+
+    <div class="actors-detail">
+            <p class = "actor-title">Cast:</p>
+            <p>${getCasts(cast)}</p>
+            <p class = "actor-title" >Crew:</p>
+            <p>${getDirectors(crew)}</p>
+    </div>
+    
+    `;

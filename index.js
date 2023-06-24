@@ -87,7 +87,7 @@ const heroBanner = function({ results: movieList })
     
     `
 
-    let controlItemIndex = 0;
+    
     /*now for the logic of the main banner */
     /*we use.entries for arrays only*/
     for (const [index, movie] of movieList.entries()) 
@@ -131,7 +131,7 @@ const heroBanner = function({ results: movieList })
 
                 <p class = "Genre">${genreList.asString(genre_ids)}</p>
                 <p class = "synopsis">${overview}</p>
-                <a href="./moviedetail.html" class = "watch-btn">
+                <a href="./moviedetail.html" class = "watch-btn" onclick="setMovieDetail(${id})">
                     <img src = "assets/images/watch button.png" alt = "Watch now" height = 80px; width = 60px;>
                 </a>
 

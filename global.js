@@ -28,3 +28,13 @@ addEventOnElements(searchTogglers, "click", function () {
 });
 
 
+/**
+ * store movieId in `localStorage`.
+ * when you click any movie card
+ */
+
+const setMovieDetail = function (movieId) {
+  window.localStorage.setItem("movieId", String(movieId));
+}
+
+

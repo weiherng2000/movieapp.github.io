@@ -30,7 +30,7 @@ export function createMovieCard(movie)
         <div class="rating">${vote_average.toFixed(1)}</div>
         <div class="year">${release_date.split('-')[0]}</div>
     </div>
-    <a href = "./moviedetail.html" class = "card-btn"  title="${title}"></a>
+    <a href="./moviedetail.html" class="card-btn" title="${title}" onclick="setMovieDetail(${id})"></a>
     
   `;
 
