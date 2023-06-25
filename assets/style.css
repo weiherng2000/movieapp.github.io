@@ -763,10 +763,10 @@ body {
 }
 
 /**
- * responsive for larger than 768px screen
+ * responsive when screen is 768px wide or less
  */
 
- @media (min-width: 768px)
+ @media (max-width: 768px)
  {
     /**
    * HOME PAGE
