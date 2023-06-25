@@ -267,7 +267,7 @@ body {
   background-color: var(--background);/*insert the variable background from root selector*/
   color: var(--on-background);
   line-height: 2.0;
-  height:300vh;/*increases body height*/
+  height:auto;/*increases body height*/
   width:200vh;
 }
 
