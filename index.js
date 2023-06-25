@@ -118,7 +118,7 @@ const heroBanner = function({ results: movieList })
           sliderItem.innerHTML = `
 
            
-          <img src="${imageBaseURL}w1280${backdrop_path}" alt="${title}" class="img-cover" loading=${index === 0 ? "eager" : "lazy"
+          <img src="${imageBaseURL}w1280${backdrop_path}" alt="${title}" class="img-cover"  loading=${index === 0 ? "eager" : "lazy"
            }>
 
              <div class="banner-content">
@@ -170,7 +170,7 @@ const heroBanner = function({ results: movieList })
 
     /*add functionality to he left and right button*/
     addHeroSlide();
-
+    
     for(const{title,path} of homePageSections)
     {
         fetchDataFromServer(`https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`, createMovieList, title);

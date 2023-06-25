@@ -384,7 +384,7 @@ body {
   background-color: var(--surface);
   color: var(--on-surface);
   padding: 24px 20px 48px;
-  height: calc(100vh - 96px);
+  height: calc(100vh - 104px);/*fixed issue here there would be 2 scrollbars under a certain height*/
   overflow-y: overlay;
   z-index: 1;
  }
@@ -493,7 +493,7 @@ body {
   display:flex;
   top: 30%;
   width: max-content;
-  gap: 1350px;
+  gap: 1320px;
   
 }
 .slider button{
@@ -509,7 +509,6 @@ body {
 .movie-list { padding-block-start: 32px; }
 /*slider titles*/
 .title-wrap{
-  margin-top: 20px;
   padding-left: 20px;
   margin-block-end: 24px;
 }
@@ -724,18 +723,6 @@ body {
 
 /*SEARCH BOX MODAL*/
 
-.search-modal {
-  position: fixed;
-  top: 96px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--surface);
-  padding: 50px 24px;
-  overflow-y: overlay;
-  z-index: 4;
-  display: none;
-}
 
 .search-modal.active { display: block; }
 
@@ -775,3 +762,38 @@ body {
     pointer-events: none;
 }
 
+/**
+ * responsive for larger than 768px screen
+ */
+
+ @media (min-width: 768px)
+ {
+    /**
+   * HOME PAGE
+   */
+   .banner { height: 500px; }
+
+   .banner-content {
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 50px;
+  }
+
+  /**
+   * MOVIE DETAIL PAGE
+   */
+
+
+   .movie-detail .poster {
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .movie-detail .detail-box { flex-grow: 1; }
+
+
+
+
+
+ }
