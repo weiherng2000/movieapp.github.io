@@ -76,15 +76,13 @@
 
 /*navbar*/
 .header {
-  position: relative;
-  padding-block: 24px;
-  padding-inline: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  background-color: black;
-  margin-right: -35px;
+    position: relative;
+    padding-block: 24px;
+    padding-inline: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
 }
 /*logo 'Home'*/
 .header .logo 
@@ -386,9 +384,9 @@ body {
   color: var(--on-surface);
   padding: 24px 20px 48px;
   height: calc(100vh - 96px);
-  overflow-y: overlay;
   z-index: 1;
   width: 100vw;
+  overflow-y: auto;
  }
 
  .container::after {
@@ -552,6 +550,8 @@ body {
   background-color: var(--banner-background);
   border-radius: var(--radius-16);
   overflow: hidden;
+  background-image: url(./images/poster-bg-icon.png);
+  aspect-ratio: 2/3;
 }
 
 .movie-card .title {

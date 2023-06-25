@@ -49,7 +49,7 @@ export function search()
             searchResultModal.innerHTML = ""; // remove old results
 
             searchResultModal.innerHTML = `
-            <p class="label">Results for</p>
+            <h1 class="label">Results for</h1>
             
             <h1 class="heading">${searchField.value}</h1>
             

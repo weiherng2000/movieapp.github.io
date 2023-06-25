@@ -22,7 +22,7 @@ export function createMovieCard(movie)
     moviecardelem.innerHTML = `
 
     <figure class = "poster card-banner">
-        <img src = "${imageBaseURL}w400${poster_path}" alt = "${title}"class = "img-cover" loading = "eager">
+        <img src = "${imageBaseURL}w200${poster_path}" alt = "${title}"class = "img-cover" loading = "eager">
     </figure>
     <h4 class = "title">${title}</h4>
     <div class = "meta-list">
