@@ -35,6 +35,7 @@ export function search()
         
         /*if search input field not empty*/
         searchWrapper.classList.add("searching");
+
         /*This cancels any previously scheduled timeout associated with the searchTimeout variable. 
         This step ensures that any previously set timeout is cleared before scheduling a new one.*/
         clearTimeout(searchTimeout);
@@ -63,6 +64,7 @@ export function search()
 
             searchResultModal.querySelector(".grid-list").appendChild(movieCard);
             }
+
 
         });
 
