@@ -15,7 +15,7 @@ export function search()
     document.querySelector("main").appendChild(searchResultModal);
 
     let searchTimeout;
-    /*activate event when input something into the search field*/
+    /*activate event when the input changes in the search field*/
     searchField.addEventListener("input", function () {
         /*searchField.value retrieves the value entered into the input field.*/
         /*!searchField.value.trim() checks if the trimmed value is an empty string or consists only of whitespace*/
