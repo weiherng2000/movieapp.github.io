@@ -33,6 +33,7 @@ const pageContent = document.querySelector("[page-content]");
  * fetch all genres eg: [ { "id": "123", "name": "Action" } ]
  * then change genre formate eg: { 123: "Action" }
  */
+/*genreList is an object with a asString method*/
 const genreList = 
 {
     // create genre string from genre_id eg: [23, 43] -> "Action, Romance".
@@ -72,6 +73,7 @@ fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api
 
 
 /*we destructure the results from the fetch data api which is the json data into movieList*/
+/*results is an array containing multiple objects*/
 const heroBanner = function({ results: movieList })
 {
     const banner = document.createElement("section");
@@ -88,9 +90,11 @@ const heroBanner = function({ results: movieList })
     
     `
 
+
     
     /*now for the logic of the main banner */
     /*we use.entries for arrays only*/
+    /*.entries return the array with key-value pairs*/
     for (const [index, movie] of movieList.entries()) 
     {
         /*this is the object from the api results/movieList*/

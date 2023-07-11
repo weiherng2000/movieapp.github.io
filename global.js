@@ -7,7 +7,8 @@
  * eventType is like onclick or hover
  * callBack is the function we execute when eventType occurs
  */
-
+/*for of is to iterate through values*/
+/*for in is to iterate through keys*/
 const addEventOnElements = function (elements, eventType, callback) {
   for (const elem of elements) elem.addEventListener(eventType, callback);
 }

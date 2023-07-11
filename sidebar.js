@@ -8,13 +8,19 @@ export function sidebar(){
     const genreList = {};
 
     /*use fetchdata function from api.js */
+    /*parameter name must be genres*/
     fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
     
     /*id and name are from the movie genre api*/
-    /*genres will be the data object*/
+    /*genres will be the data object that is an array of objects*/
+
+
     for (const { id, name } of genres) {
       genreList[id] = name;
     }
+
+    console.log(Object.entries(genreList));
+  
 
     genreLink();
 
@@ -45,6 +51,9 @@ export function sidebar(){
     const genreLink = function()
     {
         /*Object entries take the key value pair of genreList*/
+        /*Object entries convert an object into an array*/
+        /*each key-value pair in the object will become an array*/
+        /*use array destructuring as genreList is an array*/
         for(const[genreId,genreName] of Object.entries(genreList))
         {
             /*create an a tag to generate links*/
